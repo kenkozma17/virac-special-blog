@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main className="md:my-10 my-6">
       <Wrapper>
-        <section className="grid grid-cols-12 md:space-x-6">
-          <IssuePreview className="col-span-7" />
+        <section className="flex flex-col md:space-y-12 space-y-8">
+          <IssuePreview />
           <IssueStories className="col-span-5" />
         </section>
       </Wrapper>

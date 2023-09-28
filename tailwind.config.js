@@ -13,8 +13,9 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        "vs-gray": "#F2F2F2",
+        "vs-gray": "#E9E9E9",
         "vs-red": "#ED654E",
+        "vs-green": "#273232",
       },
       fontFamily: {
         merriweather: "Merriweather, serif",

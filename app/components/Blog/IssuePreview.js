@@ -13,19 +13,24 @@ export default function IssuePreview(props) {
 
       <div className="relative">
         <IssueLogo issueDate="Sept 28, 2023" issue="Issue 1" />
-        <Image
-          src="/images/issues/1/sea-breeze/cover.webp"
-          className="w-full"
-          width="600"
-          height="600"
-          alt="A table of food from Sea Breeze including crab, beef, salad and a banana shake."
-        />
+        <div
+          className="relative overflow-hidden w-full 
+          bg-cover bg-center pt-[40%]"
+        >
+          <Image
+            src="/images/issues/1/cover.webp"
+            className="w-full h-full absolute top-0 left-0 object-cover"
+            width="1000"
+            height="1000"
+            alt="A table of food from Sea Breeze including crab, beef, salad and a banana shake."
+          />
+        </div>
         <ImageOverlay />
         <Link
           href="#"
           className="font-merriweather-sans font-bold absolute 
-          rounded-lg bottom-4 left-4 text-xs bg-white md:px-3 
-          md:py-2 uppercase hover:px-4 hover:py-3 transition-all"
+          rounded-lg bottom-4 left-4 text-xs bg-white px-3  
+          py-2 uppercase hover:px-4 hover:py-3 transition-all"
         >
           Read Full Issue
         </Link>

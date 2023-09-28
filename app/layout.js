@@ -2,6 +2,7 @@ import "./globals.css";
 import { Merriweather } from "next/font/google";
 
 import NavigationBar from "./components/UI/NavigationBar";
+import Footer from "./components/UI/Footer";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={`${merriweather.className} bg-vs-gray`}>
         <NavigationBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
