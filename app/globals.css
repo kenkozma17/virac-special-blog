@@ -4,6 +4,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather+Sans&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Neuton&display=swap");
 
+h1 {
+  @apply md:text-[3rem] text-[2rem] font-bold font-dm-serif;
+}
+
 h2.story {
   @apply font-dm-serif font-bold;
+}
+
+article p:first-child::first-letter {
+  padding-right: 8px;
+
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
 }

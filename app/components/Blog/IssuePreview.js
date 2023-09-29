@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 export default function IssuePreview(props) {
   return (
-    <article
+    <section
       className={`${props.className} pt-10 
       relative border-t-2 border-black inline-b`}
     >
@@ -35,6 +35,6 @@ export default function IssuePreview(props) {
           Read Full Issue
         </Link>
       </div>
-    </article>
+    </section>
   );
 }

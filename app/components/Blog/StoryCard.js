@@ -5,8 +5,8 @@ export default function StoryCard(props) {
     <div className={`${props.className}`}>
       <Link href="#" className="group">
         <div
-          className="relative overflow-hidden w-full 
-          bg-cover bg-center pt-[50%] group mb-2"
+          className={`relative overflow-hidden w-full 
+          bg-cover bg-center pt-[${props.imagePadding}%] group mb-2`}
         >
           <Image
             className="group-hover:scale-110 transition-transform 
@@ -24,10 +24,11 @@ export default function StoryCard(props) {
         <p className="font-merriweather text-sm">{props.storyDetail}</p>
         <div
           className="border-black border mt-3
-            border-opacity-25 w-[4rem] group-hover:border-vs-red transition-all"
+            border-opacity-25 w-[4rem] group-hover:border-vs-red
+            transition-all group-hover:w-full duration-500"
         ></div>
       </Link>
-      {props.categories.length > 0 && (
+      {props.categories && props.categories.length > 0 && (
         <div className="flex md:space-x-3 space-x-2 md:my-3 my-2">
           {props.categories.map((cat) => (
             <span className="mb-3 text-[10px] font-bold font-merriweather-sans uppercase">
