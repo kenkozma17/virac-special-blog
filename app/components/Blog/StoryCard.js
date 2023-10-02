@@ -3,17 +3,17 @@ import Image from "next/image";
 export default function StoryCard(props) {
   return (
     <div className={`${props.className}`}>
-      <Link href="#" className="group">
+      <Link href={props.url} className="group">
         <div
           className={`relative overflow-hidden w-full 
-          bg-cover bg-center pt-[${props.imagePadding}%] group mb-2`}
+          bg-cover bg-center pt-[50%] group mb-2`}
         >
           <Image
             className="group-hover:scale-110 transition-transform 
             ease-in-out duration-300 w-full h-full absolute top-0
             left-0 object-cover"
             src={props.imagePath}
-            width="400"
+            width="800"
             height="400"
             alt="The front side of the Sea Breeze restaurant building"
           />

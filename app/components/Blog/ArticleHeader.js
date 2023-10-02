@@ -17,12 +17,20 @@ export default function ArticleHeader(props) {
         className="flex justify-between md:py-4 py-2.5
         border-b border-black border-opacity-50"
       >
-        <p className="text-black md:text-sm text-xs text-opacity-50">
-          <span className="italic ">Written by:</span>{" "}
-          <span className="font-bold font-merriweather-sans">
-            {props.author}
-          </span>
-        </p>
+        <div>
+          <p className="text-black md:text-sm text-xs text-opacity-50">
+            <span className="italic ">Written by:</span>{" "}
+            <span className="font-bold font-merriweather-sans">
+              {props.author}
+            </span>
+          </p>
+          <p className="text-black md:text-sm text-xs text-opacity-50">
+            <span className="italic ">Photos by:</span>{" "}
+            <span className="font-bold font-merriweather-sans">
+              {props.photoAuthor}
+            </span>
+          </p>
+        </div>
         <p className="md:text-sm text-xs text-black text-opacity-50 font-merriweather font-bold">
           {props.date}
         </p>
@@ -37,7 +45,7 @@ export default function ArticleHeader(props) {
         </div>
       )}
 
-      <div className="socials flex md:space-x-12 space-x-8 items-center justify-center">
+      <div className="socials md:mb-12 flex md:space-x-12 space-x-8 items-center justify-center">
         <FbIcon className="md:w-auto w-6 md:h-auto h-6" />
         <TwitterIcon className="md:w-auto w-6 md:h-auto h-6" />
         <CopyIcon className="md:w-auto w-6 md:h-auto h-6" />

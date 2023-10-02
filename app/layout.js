@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={`${merriweather.className} bg-vs-gray`}>
         <NavigationBar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
