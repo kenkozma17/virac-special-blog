@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
     title: "Virac Special",
     description:
       "Celebrating Virac's Finest Businesses: Explore exclusive articles on local enterprises in Virac with Virac Special. Discover success stories, insights, and more in our insightful publication.",
-    image: "/images/issues/1/cover.webp",
+    image: "/images/issues/1/tandu/image-4.webp",
     url: "https://viracspecial.com",
   };
   return {
