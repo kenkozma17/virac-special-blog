@@ -51,16 +51,16 @@ export async function generateMetadata({ params }) {
       title: meta.title,
       description: meta.description,
       creator: "@kenkozma",
-      images: [meta.image],
+      images: [meta.url + meta.image],
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
       url: meta.url,
-      siteName: "Virac Special",
+      siteName: meta.title,
       images: [
         {
-          url: meta.image,
+          url: meta.url + meta.image,
           width: 800,
           height: 600,
         },

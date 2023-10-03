@@ -123,7 +123,7 @@ export async function generateMetadata({ params }) {
       title: blog.frontMatter.title + " | Virac Special",
       description: blog.frontMatter.description,
       creator: "@kenkozma",
-      images: [blog.frontMatter.image],
+      images: ["https://viracspecial.com" + blog.frontMatter.image],
     },
     openGraph: {
       title: blog.frontMatter.title + " | Virac Special",
@@ -132,7 +132,7 @@ export async function generateMetadata({ params }) {
       siteName: "Virac Special",
       images: [
         {
-          url: blog.frontMatter.image,
+          url: "https://viracspecial.com" + blog.frontMatter.image,
           width: 800,
           height: 600,
         },
