@@ -12,7 +12,7 @@ export default function IssuePreview(props) {
       <IssueCount className="absolute top-0 left-0">Issue 9</IssueCount>
 
       <div className="relative">
-        <IssueLogo issueDate="Sept 28, 2023" issue="Issue 9" />
+        <IssueLogo issueDate="Sept 30, 2023" issue="Issue 9" />
         <div
           className="relative overflow-hidden w-full 
           bg-cover bg-center pt-[40%]"
