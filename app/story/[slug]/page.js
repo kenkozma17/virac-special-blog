@@ -70,6 +70,7 @@ export default function Story({ params }) {
         title={props.frontMatter.title}
         detail={props.frontMatter.description}
         author={props.frontMatter.author}
+        editor={props.frontMatter.editor}
         photoAuthor={props.frontMatter.photos}
         date={props.frontMatter.date}
         categories={props.frontMatter.categories}
