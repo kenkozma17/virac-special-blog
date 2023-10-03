@@ -31,7 +31,10 @@ export default function StoryCard(props) {
       {props.categories && props.categories.length > 0 && (
         <div className="flex md:space-x-3 space-x-2 md:my-3 my-2">
           {props.categories.map((cat) => (
-            <span className="mb-3 text-[10px] font-bold font-merriweather-sans uppercase">
+            <span
+              key={cat}
+              className="mb-3 text-[10px] font-bold font-merriweather-sans uppercase"
+            >
               {cat}
             </span>
           ))}
