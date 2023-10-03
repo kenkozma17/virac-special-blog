@@ -18,7 +18,7 @@ export default function StoryCard(props) {
             alt="The front side of the Sea Breeze restaurant building"
           />
         </div>
-        <h2 className="md:text-[1.75rem] text-[1.45rem] story uppercase">
+        <h2 className="md:text-[3rem] text-[2.25rem] story uppercase">
           {props.storyTitle}
         </h2>
         <p className="font-merriweather text-sm">{props.storyDetail}</p>

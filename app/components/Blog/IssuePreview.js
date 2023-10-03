@@ -6,13 +6,13 @@ import Image from "next/image";
 export default function IssuePreview(props) {
   return (
     <section
-      className={`${props.className} pt-10 
+      className={`${props.className} md:pt-14 pt-10 
       relative border-t-2 border-black inline-b`}
     >
-      <IssueCount className="absolute top-0 left-0">Issue 1</IssueCount>
+      <IssueCount className="absolute top-0 left-0">Issue 9</IssueCount>
 
       <div className="relative">
-        <IssueLogo issueDate="Sept 28, 2023" issue="Issue 1" />
+        <IssueLogo issueDate="Sept 28, 2023" issue="Issue 9" />
         <div
           className="relative overflow-hidden w-full 
           bg-cover bg-center pt-[40%]"
@@ -32,7 +32,7 @@ export default function IssuePreview(props) {
           rounded-lg bottom-4 left-4 text-xs bg-white px-3  
           py-2 uppercase hover:px-4 hover:py-3 transition-all"
         >
-          Read Full Issue
+          Full Issue Coming Soon
         </Link>
       </div>
     </section>

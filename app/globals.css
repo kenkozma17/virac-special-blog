@@ -2,14 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather+Sans&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Neuton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:wght@200;300;400&family=Merriweather+Sans&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 h1 {
-  @apply md:text-[3rem] text-[2rem] font-bold font-dm-serif;
-}
-
-h2.story {
-  @apply font-dm-serif font-bold;
+  @apply md:text-[3rem] text-[2rem];
 }
 
 article p:first-child::first-letter {

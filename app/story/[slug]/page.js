@@ -10,43 +10,80 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import BlogImage from "../../components/mdx/BlogImage";
 import TwoColumn from "../../components/mdx/TwoColumn";
 
+import Link from "next/link";
+import BackArrow from "@/app/components/Icons/BackArrow";
+
 export default function Story({ params }) {
   const props = getPost(params);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: props.frontMatter.title,
+    image: props.frontMatter.image,
+    editor: props.frontMatter.editor,
+    genre: "search engine optimization",
+    keywords: "virac publication catanduanes",
+    url: `https://viracspecial.com/story/${props.frontMatter.slug}`,
+    datePublished: props.frontMatter.datePublished,
+    dateCreated: props.frontMatter.datePublished,
+    dateModified: props.frontMatter.datePublished,
+    description: props.frontMatter.description,
+    author: {
+      "@type": "Person",
+      name: props.frontMatter.author,
+    },
+  };
+
   return (
-    <>
-      <Wrapper className="md:my-8 my-4" isSmall={true}>
+    <Wrapper className="md:my-8 my-4" isSmall={true}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Link
+        href="/"
+        className="h-6 group md:text-sm text-xs md:mb-6 my-3 inline-block"
+      >
         <div
-          className={`relative overflow-hidden w-full 
-          bg-cover bg-center pt-[50%] group mb-2`}
+          className="group-hover:border-b group-hover:border-black transition-colors
+          pb-1 flex items-center gap-x-2"
         >
-          <Image
-            className="w-full h-full absolute top-0
-            left-0 object-cover"
-            src={props.frontMatter.image}
-            width="1000"
-            height="1000"
-            alt="The front side of the Sea Breeze restaurant building"
-          />
+          <BackArrow className="w-6" />
+          <span>Back to stories</span>
         </div>
-        <ArticleHeader
-          title={props.frontMatter.title}
-          detail={props.frontMatter.description}
-          author={props.frontMatter.author}
-          photoAuthor={props.frontMatter.photos}
-          date={props.frontMatter.date}
-          categories={props.frontMatter.categories}
+      </Link>
+      <div
+        className={`relative overflow-hidden w-full 
+          bg-cover bg-center pt-[50%] group mb-2`}
+      >
+        <Image
+          className="w-full h-full absolute top-0
+            left-0 object-cover"
+          src={props.frontMatter.image}
+          width="1000"
+          height="1000"
+          alt="The front side of the Sea Breeze restaurant building"
         />
-        <article
-          className="flex flex-col space-y-8
+      </div>
+      <ArticleHeader
+        title={props.frontMatter.title}
+        detail={props.frontMatter.description}
+        author={props.frontMatter.author}
+        photoAuthor={props.frontMatter.photos}
+        date={props.frontMatter.date}
+        categories={props.frontMatter.categories}
+      />
+      <article
+        className="flex flex-col space-y-8
           leading-9 font-merriweather md:px-10"
-        >
-          <MDXRemote
-            source={props.content}
-            components={{ BlogImage, TwoColumn }}
-          />
-        </article>
-      </Wrapper>
-    </>
+      >
+        <MDXRemote
+          source={props.content}
+          components={{ BlogImage, TwoColumn }}
+        />
+      </article>
+    </Wrapper>
   );
 }
 
@@ -79,7 +116,29 @@ export async function generateMetadata({ params }) {
   const blog = getPost(params);
 
   return {
-    title: blog.frontMatter.title,
+    title: blog.frontMatter.title + " | Virac Special",
     description: blog.frontMatter.description,
+    twitter: {
+      card: "summary_large_image",
+      title: blog.frontMatter.title + " | Virac Special",
+      description: blog.frontMatter.description,
+      creator: "@kenkozma",
+      images: [blog.frontMatter.image],
+    },
+    openGraph: {
+      title: blog.frontMatter.title + " | Virac Special",
+      description: blog.frontMatter.description,
+      url: "https://viracspecial.com",
+      siteName: "Virac Special",
+      images: [
+        {
+          url: blog.frontMatter.image,
+          width: 800,
+          height: 600,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
   };
 }

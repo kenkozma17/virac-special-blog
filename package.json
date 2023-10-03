@@ -15,7 +15,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/mdx": "^2.0.8",
     "gray-matter": "^4.0.3",
-    "next": "latest",
+    "next": "^13.5.4",
     "next-mdx-remote": "^4.4.1",
     "react": "latest",
     "react-dom": "latest"

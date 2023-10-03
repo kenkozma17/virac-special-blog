@@ -18,9 +18,9 @@ module.exports = {
         "vs-green": "#273232",
       },
       fontFamily: {
-        merriweather: "Merriweather, serif",
-        "merriweather-sans": "Merriweathers, sans-serif",
-        "dm-serif": "DM Serif Display, serif",
+        merriweather: ["Merriweather", "sans-serif"],
+        "merriweather-sans": ["Merriweathers", "sans-serif"],
+        josefin: ["Josefin Sans", "sans-serif"],
       },
     },
   },
