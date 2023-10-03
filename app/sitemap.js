@@ -1,5 +1,5 @@
 import fs from "fs";
-
+import path from "path";
 export default function sitemap() {
   const blogDir = "stories";
   const files = fs.readdirSync(path.join(blogDir));
