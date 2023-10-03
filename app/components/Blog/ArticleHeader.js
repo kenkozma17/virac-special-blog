@@ -32,6 +32,13 @@ export default function ArticleHeader(props) {
             <span className="font-bold">{props.author}</span>
           </p>
           <p
+            className="font-merriweather-sans text-black 
+            md:text-sm text-xs text-opacity-50"
+          >
+            <span className="italic">Edited by:</span>{" "}
+            <span className="font-bold">{props.editor}</span>
+          </p>
+          <p
             className="text-black md:text-sm text-xs 
           text-opacity-50 font-merriweather-sans"
           >
