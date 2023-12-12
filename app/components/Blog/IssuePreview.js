@@ -6,11 +6,9 @@ import Image from "next/image";
 export default function IssuePreview(props) {
   return (
     <section
-      className={`${props.className} md:pt-14 pt-10 
-      relative border-t-2 border-black inline-b`}
+      className={`${props.className}  md:pt-4 
+      relative  inline-b`}
     >
-      <IssueCount className="absolute top-0 left-0">Issue 9</IssueCount>
-
       <div className="relative">
         <IssueLogo issueDate="Sept 30, 2023" issue="Issue 9" />
         <div

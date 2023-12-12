@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import IssueLogo from "./IssueLogo";
 export default function StoryCard(props) {
   return (
     <div className={`${props.className}`}>
@@ -17,6 +18,7 @@ export default function StoryCard(props) {
             height="400"
             alt="The front side of the Sea Breeze restaurant building"
           />
+          <IssueLogo issueDate="Sept 30, 2023" issue="Issue 9" />
         </div>
         <h2 className="md:text-[3rem] text-[2.25rem] story uppercase">
           {props.storyTitle}

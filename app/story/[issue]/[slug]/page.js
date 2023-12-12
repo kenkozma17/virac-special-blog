@@ -1,14 +1,14 @@
 import Image from "next/image";
-import Wrapper from "../../components/UI/Wrapper";
-import ArticleHeader from "../../components/Blog/ArticleHeader";
+import Wrapper from "@/app/components/UI/Wrapper";
+import ArticleHeader from "@/app/components/Blog/ArticleHeader";
 
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
-import BlogImage from "../../components/mdx/BlogImage";
-import TwoColumn from "../../components/mdx/TwoColumn";
+import BlogImage from "@/app/components/mdx/BlogImage";
+import TwoColumn from "@/app/components/mdx/TwoColumn";
 
 import Link from "next/link";
 import BackArrow from "@/app/components/Icons/BackArrow";
@@ -88,9 +88,9 @@ export default function Story({ params }) {
   );
 }
 
-function getPost({ slug }) {
+function getPost({ slug, issue }) {
   const markdownFile = fs.readFileSync(
-    path.join("stories", slug + ".mdx"),
+    path.join(`stories/${issue}`, slug + ".mdx"),
     "utf-8"
   );
 
