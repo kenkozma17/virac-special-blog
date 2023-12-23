@@ -20,7 +20,7 @@ export default function StoryCard(props) {
           />
           <IssueLogo issueDate="Sept 30, 2023" issue="Issue 9" />
         </div>
-        <h2 className="md:text-[3rem] text-[2.25rem] story uppercase">
+        <h2 className="md:text-[3rem] text-[2.25rem] leading-[1.1] story uppercase">
           {props.storyTitle}
         </h2>
         <p className="font-merriweather text-sm">{props.storyDetail}</p>
