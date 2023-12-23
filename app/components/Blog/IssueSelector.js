@@ -37,7 +37,7 @@ export default function IssueSelector({ issue }) {
       <div className="inline-block relative">
         <ul className="absolute left-0 bottom-0 transform -translate-x-full flex">
           {previousIssues.map((issue, index) => (
-            <Link href={issue.issueUrl}>
+            <Link key={index} href={issue.issueUrl}>
               <li
                 className="cursor-pointer group border-black border-opacity-30 
                 hover:border-vs-red border-2 text-[1.3rem] mr-8 text-black hover:text-opacity-100 text-opacity-30"
