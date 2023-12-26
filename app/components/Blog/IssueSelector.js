@@ -5,14 +5,14 @@ export default function IssueSelector({ issue }) {
     {
       issueNumber: 10,
       issueUrl: "/",
-      issueName: "Eating",
+      issueName: "Celebration",
       issueDate: "November 1, 2023",
       latest: true,
     },
     {
       issueNumber: 9,
       issueUrl: "/issue/9",
-      issueName: "Planning",
+      issueName: "Experience",
       issueDate: "October 1, 2023",
       latest: false,
     },
