@@ -134,8 +134,8 @@ export async function generateMetadata({ params }) {
       images: [
         {
           url: "https://viracspecial.com" + blog.frontMatter.image,
-          width: 800,
-          height: 600,
+          width: 1200,
+          height: 630,
         },
       ],
       locale: "en_US",
