@@ -129,7 +129,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: blog.frontMatter.title + " | Virac Special",
       description: blog.frontMatter.description,
-      url: "https://viracspecial.com",
+      url: "https://viracspecial.com/" + 'story/' + blog.frontMatter.issue + '/' + blog.frontMatter.slug,
       siteName: "Virac Special",
       images: [
         {
