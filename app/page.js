@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
     description: meta.description,
     twitter: {
       card: "summary_large_image",
-      title: meta.title,
+      title: meta.title, 
       description: meta.description,
       creator: "@kenkozma",
       images: [meta.url + meta.image],
@@ -28,13 +28,13 @@ export async function generateMetadata({ params }) {
       description: meta.description,
       url: meta.url,
       siteName: meta.title,
-      images: [
-        {
-          url: meta.url + meta.image,
-          width: 800,
-          height: 600,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: meta.url + meta.image,
+      //     width: 800,
+      //     height: 600,
+      //   },
+      // ],
       locale: "en_US",
       type: "website",
     },
